@@ -1,11 +1,11 @@
--- 1. Formatear tablas en orden seguro
+-- 1. Format tables
 DROP TABLE IF EXISTS Venta CASCADE;
 DROP TABLE IF EXISTS Ciudad CASCADE;
 DROP TABLE IF EXISTS Producto CASCADE;
 DROP TABLE IF EXISTS Tipo_Venta CASCADE;
 DROP TABLE IF EXISTS Tipo_Cliente CASCADE;
 
--- 2. Crear Tablas maestras
+-- 2. Create dimension tables
 CREATE TABLE Ciudad (
     ID_Ciudad SERIAL PRIMARY KEY,
     Ciudad VARCHAR(255) NOT NULL UNIQUE
@@ -26,7 +26,7 @@ CREATE TABLE Tipo_Cliente (
     Tipo_Cliente VARCHAR(255) NOT NULL UNIQUE
 );
 
--- 3. Crear Tabla principal de ventas
+-- 3. Create the sales fact table
 CREATE TABLE Venta (
     ID_Venta SERIAL PRIMARY KEY,
 
